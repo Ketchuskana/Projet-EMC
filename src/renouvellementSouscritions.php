@@ -54,7 +54,7 @@ if ($result->num_rows > 0) {
 
             // Étape 5 : Envoyer un email de confirmation
             $email_content = generateEmailContent($customer_info, $price, $currency);
-            sendEmail($customer_info['email'], $email_content); // Envoyer l'email
+            sendEmail($customer_info['email'], $email_content);
         } else {
             echo "Client ID: $customer_id non trouvé.<br>";
         }
@@ -74,9 +74,9 @@ function getCustomerInfo($customer_id, $conn) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        return $result->fetch_assoc(); // Renvoyer les informations du client
+        return $result->fetch_assoc();
     } else {
-        return null; // Aucun client trouvé
+        return null;
     }
 }
 
@@ -88,7 +88,7 @@ function generateInvoiceNumber($conn) {
     $stmt->bind_param("i", $year);
     $stmt->execute();
     $result = $stmt->get_result();
-    $count = $result->fetch_assoc()['count'] + 1; // Incrémentation
+    $count = $result->fetch_assoc()['count'] + 1;
 
     return "EMC" . $year . str_pad($count, 5, "0", STR_PAD_LEFT);
 }
@@ -100,7 +100,7 @@ function generateEmailContent($customer_info, $price, $currency) {
     $template = str_replace('[LASTNAME]', $customer_info['lastname'], $template);
     $template = str_replace('[TYPE]', "Membership mensuel " . $price . " " . $currency, $template);
     
-    return $template; // Retourner le contenu de l'email
+    return $template;
 }
 
 // Fonction pour envoyer l'email
@@ -113,7 +113,7 @@ function sendEmail($to, $email_content) {
         $mail->Host = 'smtp.gmail.com';                    // Serveur SMTP de Gmail
         $mail->SMTPAuth = true;                            // Activez l'authentification SMTP
         $mail->Username = 'ketoutou1@gmail.com';          // Votre adresse email Gmail
-        $mail->Password = 'agry kmwr zqoq dnhh'; // Votre mot de passe Gmail ou mot de passe d'application
+        $mail->Password = 'agry kmwr zqoq dnhh';           // Votre mot de passe Gmail ou mot de passe d'application
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Activer le chiffrement TLS
         $mail->Port = 587;                                 // Port TCP à utiliser
 
