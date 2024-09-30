@@ -45,9 +45,9 @@ Pour configurer l'envoi d'emails via PHPMailer, modifiez les paramètres suivant
 ```php
 $mail->Username = 'votre_adresse_email@gmail.com'; // Votre adresse email Gmail
 $mail->Password = 'votre_mot_de_passe_ou_mot_de_passe_d_application'; // Votre mot de passe ou mot de passe d'application
-                    
+ ```              
 
-### Remarques
+## Remarques
 - N'oubliez pas de remplacer les parties spécifiques à votre projet avec vos propres informations (comme le nom de l'entreprise, les adresses email, etc.).
 - Ce fichier README fournit une vue d'ensemble du projet et des instructions claires pour qu'une autre personne puisse le configurer et l'utiliser facilement. 
                     
