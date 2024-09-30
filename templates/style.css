@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.row {
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.email-content {
+    padding: 20px;
+    color: #000;
+}
+
+.email-content a {
+    color: #145c9e;
+    text-decoration: none;
+}
+
+.email-content p {
+    line-height: 1.5;
+}
