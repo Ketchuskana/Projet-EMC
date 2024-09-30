@@ -8,7 +8,7 @@ Projet-EMC/ <br>
   │ ├── bd.php # Connexion à la base de données <br>
   │ ├── renouvellementSouscriptions.php # Script principal pour le renouvellement des abonnements <br>
   │ └── PHPMailer/ # Dossier contenant les fichiers de PHPMailer <br>
-    │ ├── src/ │ │ ├── Exception.php │ │ ├── PHPMailer.php │ │ └── SMTP.php <br>
+  │ ├── src/ │ │ ├── Exception.php │ │ ├── PHPMailer.php │ │ └── SMTP.php <br>
 ├── templates/ <br>
   │ ├── email.html # Modèle d'email envoyé aux clients <br>
   ├ │── styles.css # Fichier CSS pour le style de l'email <br>
